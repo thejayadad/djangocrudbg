@@ -1,0 +1,15 @@
+{%extends 'blog/base.html'%}
+
+{% block content%}
+<a href="/">Back Home</a>
+<h2 class="mb-4 display-5 fw-bold text-center text-info">{{post.title}}</h2>
+<br>
+<p>{{post.date_added}} by <a href="#">thejayadad</a></p>
+<p>{{post.intro}}</p>
+<blockquote>
+    <p>{{post.body}}</p>
+</blockquote>
+
+<p>Be Respectful in the party below :-)</p>
+
+{% endblock%}

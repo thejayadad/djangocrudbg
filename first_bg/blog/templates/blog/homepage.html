@@ -1,0 +1,16 @@
+{% extends 'blog/base.html'%}
+
+{% block content %}
+<h2 class="mb-4 display-5 fw-bold text-center text-info">All Post!</h2>
+<br>
+<div class="list-group container">
+{% for post in posts%}
+<h2 class="mb-4 text-secondary">{{post.title}}</h2>
+<p>{{post.date_added}} <a href="#">Admin</a></p>
+
+<p>{{post.intro}}</p>
+<a href="{% url 'detail' post.slug %}">Read More</a>
+<hr>
+{% endfor%}
+</div>
+{% endblock%}
